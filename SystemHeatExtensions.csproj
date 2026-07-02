@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net481</TargetFramework>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <Reference Include="Assembly-CSharp">
+          <HintPath>Libraries\Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine">
+          <HintPath>Libraries\UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule">
+          <HintPath>Libraries\UnityEngine.CoreModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputLegacyModule">
+        <HintPath>Libraries\UnityEngine.InputLegacyModule.dll</HintPath>
+      </Reference>
+      <Reference Include="SystemHeat">
+        <HintPath>Libraries\SystemHeat.dll</HintPath>
+      </Reference>
+  </ItemGroup>
+
+    <!-- 🚀 AUTO COPY STEP -->
+  <Target Name="PostBuild" AfterTargets="Build">
+    <Copy
+      SourceFiles="$(TargetPath)"
+      DestinationFolder="C:\Users\cwbar\KerbalSpaceProgram\English\GameData\Fusion!\Plugins" />
+  </Target>
+
+</Project>
